@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
 
         // для теста исключения по размеру
-        String[][] arr = {{"5","7","3","4"}, {"7","0","z"}, {"8","1","h"}};
+        String[][] arr = {{"5","7","3","4"}, {"7","0","k"}, {"8","1","h"}};
 
         // для теста исключения по типу данных
 //        String[][] arr = {{"5","7","3","4"}, {"7","0","1","5"}, {"8","1","h","1"}, {"5","7","3","4"}};
@@ -31,6 +31,8 @@ public class Main {
             System.out.printf("Сумма элементов массива = %d", a);
         } catch (MyArraySizeException | MyArrayDataException e) {
             System.out.println(e.getLocalizedMessage());
+        } catch (Exception e){
+            System.out.println("Непредвиденное исключение: " + e.getLocalizedMessage());
         }
     }
 
